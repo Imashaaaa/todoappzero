@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodoComponet = ({todos}) => {
+const TodoComponet = ({todos, deleteTodo}) => {
 
     return(
         todos.map(todo => {
@@ -9,6 +9,7 @@ const TodoComponet = ({todos}) => {
                     <div>Description:{todo.desc}</div>
                     <div>Time:{todo.time}</div>
                     <div>Id:{todo.id}</div>
+                    <button onClick= {() => {deleteTodo(todo.id)}}>Delete</button>
                 </div>
             )
         })

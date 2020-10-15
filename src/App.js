@@ -15,11 +15,21 @@ class App extends Component{
       
   }
 
+  deleteTodo = (id) => {
+    let newTodos = this.state.todos.filter(todo => {
+      return todo.id !== id;
+    })
+
+    this.setState({
+      todos: newTodos
+    })
+  }
+
   render() {
     return (
       <div className="App">
           <h1>Technocrats</h1>
-          <TodoComponent todos={this.state.todos}/>
+          <TodoComponent todos={this.state.todos} deleteTodo={ this.deleteTodo }/>
       </div>
     )
   }  
