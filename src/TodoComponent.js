@@ -8,7 +8,7 @@ const TodoComponet = ({todos, deleteTodo}) => {
                 <div className="todo" key={todo.id}>
                     <div>Description:{todo.desc}</div>
                     <div>Time:{todo.time}</div>
-                    <div>Id:{todo.id}</div>
+                    <div>Id:{todo.id} </div>
                     <button onClick= {() => {deleteTodo(todo.id)}}>Delete</button>
                 </div>
             )
